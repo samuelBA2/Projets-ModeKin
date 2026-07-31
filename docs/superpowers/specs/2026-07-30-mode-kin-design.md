@@ -51,26 +51,29 @@ Conséquence pratique : ajouter un service dans `services.ts` crée automatiquem
 
 ## 3. Stack technique
 
-| Domaine | Choix |
-|---|---|
-| Framework | React 18 + TypeScript |
-| Build | Vite |
-| Prérendu statique | `vite-react-ssg` |
-| Routing | React Router v6 |
-| Styles | Tailwind CSS |
-| Animations | Framer Motion |
-| Formulaires | React Hook Form + Zod |
-| Icônes | Lucide React |
-| Meta / SEO | React Helmet Async |
-| Polices | `@fontsource` (auto-hébergées) |
-| Qualité | ESLint + Prettier |
-| Hébergement | Vercel |
+| Domaine | Choix | Version |
+|---|---|---|
+| Framework | React + TypeScript | 19.2 / 7.0 |
+| Build | Vite | 8.2 |
+| Routing + prérendu | React Router (mode framework) | 8.3 |
+| Styles | Tailwind CSS (`@theme` en CSS) | 4.3 |
+| Animations | Framer Motion | 12.43 |
+| Formulaires | React Hook Form + Zod | 7.83 / 4.4 |
+| Icônes | Lucide React | 1.28 |
+| Tests | Vitest + Testing Library | 4.1 / 16.3 |
+| Polices | `@fontsource` (auto-hébergées) | 5.3 |
+| Qualité | ESLint + Prettier | 10.8 / 3.9 |
+| Hébergement | Vercel (statique) | — |
 
 ### Justification du prérendu
 
-Une SPA Vite classique envoie aux robots d'indexation une coquille HTML vide (`<div id="root"></div>`). React Helmet injecte les balises meta **après** l'exécution du JavaScript, ce qui limite l'indexation réelle même si le score Lighthouse SEO reste bon.
+Une SPA Vite classique envoie aux robots d'indexation une coquille HTML vide (`<div id="root"></div>`). Les balises meta injectées côté client arrivent **après** l'exécution du JavaScript, ce qui limite l'indexation réelle même si le score Lighthouse SEO reste bon.
 
-`vite-react-ssg` conserve exactement la stack demandée (React Router + Helmet) tout en générant un fichier `.html` complet par route au moment du build. Les robots reçoivent le balisage intégral ; les visiteurs bénéficient de la navigation SPA après hydratation. Aucun serveur à héberger.
+React Router en **mode framework** avec `ssr: false` + `prerender` génère un fichier `.html` complet par route au moment du build. Les robots reçoivent le balisage intégral ; les visiteurs bénéficient de la navigation SPA après hydratation. Aucun serveur à héberger.
+
+**Décision révisée (2026-07-31).** Le spec initial prévoyait `vite-react-ssg`. Vérification faite, cette bibliothèque ne supporte pas React 19 (annoncé comme « roadmap ») et sa propre documentation recommande d'utiliser le SSG natif de React Router. Le prérendu passe donc par React Router 8, officiellement maintenu.
+
+**Conséquence : React Helmet Async est supprimé.** Le mode framework fournit un export `meta` par route, évalué au moment du prérendu. Les balises `title`, `description`, Open Graph et Twitter sont donc écrites directement dans le HTML statique, sans dépendre du JavaScript — strictement meilleur pour le référencement que Helmet.
 
 ---
 
@@ -227,9 +230,9 @@ Durées : 150–300 ms pour les micro-interactions, 400 ms maximum pour les tran
 
 ## 8. Couche SEO
 
-### Composant `<Seo>`
+### Export `meta` par route
 
-Encapsule React Helmet Async. Émet par page : `title`, `description`, `canonical`, Open Graph complet, Twitter Cards, directives `robots`.
+Chaque module de route exporte une fonction `meta` évaluée au prérendu. Un utilitaire partagé `buildMeta()` produit de façon uniforme : `title`, `description`, `canonical`, Open Graph complet, Twitter Cards et directives `robots`. Aucune bibliothèque tierce.
 
 ### Générateurs schema.org (`src/seo/schema.ts`)
 
@@ -323,30 +326,33 @@ Deux formulaires : `/contact` (nom, téléphone, email, service, message) et `/d
 
 ```
 ModeKin/
-├── docs/superpowers/specs/
+├── docs/superpowers/{specs,plans}/
 ├── public/
-│   ├── images/          # structure documentée, dimensions indiquées
-│   ├── robots.txt       # généré au build
-│   └── sitemap.xml      # généré au build
+│   ├── images/            # structure documentée, dimensions indiquées
+│   ├── robots.txt         # généré au build
+│   └── sitemap.xml        # généré au build
 ├── scripts/
 │   └── generate-sitemap.ts
-├── src/
+├── app/
+│   ├── root.tsx           # document HTML, Layout, ErrorBoundary
+│   ├── routes.ts          # configuration des routes
+│   ├── app.css            # @theme Tailwind 4 + polices
+│   ├── routes/            # un module par route (meta + loader + composant)
 │   ├── components/
-│   │   ├── layout/      # Navbar, Footer, FloatingActions, ScrollToTop
-│   │   ├── ui/          # Button, Card, Accordion, Lightbox, Input, GlassPanel
-│   │   └── sections/    # Hero, Stats, ServicesPreview, Testimonials, CtaBand
+│   │   ├── layout/        # Navbar, Footer, FloatingActions, Breadcrumbs
+│   │   ├── ui/            # Button, Card, Accordion, Lightbox, Field, GlassPanel
+│   │   └── sections/      # Hero, Stats, ServicesPreview, Testimonials, CtaBand
 │   ├── data/
-│   ├── pages/
-│   ├── seo/             # Seo.tsx, schema.ts
-│   ├── services/        # formSubmit.ts
-│   ├── hooks/
-│   ├── styles/
-│   ├── routes.tsx
-│   └── main.tsx
+│   ├── seo/               # meta.ts, schema.ts
+│   ├── services/          # formSubmit.ts
+│   └── hooks/
+├── react-router.config.ts # ssr:false + prerender
+├── vite.config.ts
 ├── vercel.json
-├── tailwind.config.ts
 └── README.md
 ```
+
+Le thème Tailwind 4 (palette, typographie, échelle d'espacement) est déclaré dans `app/app.css` via la directive `@theme`. Il n'y a pas de `tailwind.config.ts`.
 
 ---
 
