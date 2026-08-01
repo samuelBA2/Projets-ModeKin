@@ -938,14 +938,15 @@ import { buildSitemapUrls, renderSitemap } from "./generate-sitemap";
 import { SERVICE_SLUGS } from "~/data/services";
 import { PROJECT_SLUGS } from "~/data/projects";
 
-test("le sitemap contient les 21 URLs attendues", () => {
+test("le sitemap contient les 20 URLs attendues", () => {
   const urls = buildSitemapUrls();
   expect(urls).toContain("/");
   expect(urls).toContain("/services");
   SERVICE_SLUGS.forEach((s) => expect(urls).toContain(`/services/${s}`));
   PROJECT_SLUGS.forEach((s) => expect(urls).toContain(`/realisations/${s}`));
   expect(urls).toContain("/devis");
-  // 10 statiques indexables + 5 services + 6 projets = 21 (hors pages légales noindex? — voir note)
+  // 9 statiques indexables + 5 services + 6 projets = 20 URLs de contenu
+  expect(urls).toHaveLength(20);
   expect(new Set(urls).size).toBe(urls.length); // pas de doublon
 });
 test("le XML rendu est bien formé et absolu", () => {
@@ -1621,15 +1622,16 @@ test("la 404 propose un retour à l'accueil", () => {
 npm run typecheck   # 0 erreur
 npm test            # tous les tests au vert
 npm run build       # build + sitemap
-ls build/client/**/index.html   # 21 fichiers HTML attendus
-grep -c '<loc>' build/client/sitemap.xml   # 20 (les 20 URLs listées ; l'accueil = 1)
+grep -c '<loc>' build/client/sitemap.xml   # 20 (les 20 URLs de contenu)
 ```
 
 Vérifier le nombre de pages prérendues :
 
 ```bash
-find build/client -name index.html | wc -l   # doit afficher 21
+find build/client -name '*.html' | wc -l   # 20 pages de contenu prérendues
 ```
+
+> **Le 404 est une route splat (`*`), non énumérable, donc non prérendue en fichier.** Vercel sert le shell pour tout chemin sans fichier et le routeur affiche le composant 404 côté client (soft-404, HTTP 200). C'est un compromis assumé et acceptable pour un site vitrine ; les 20 pages de contenu, elles, sont de vrais fichiers HTML.
 
 - [ ] **Étape 6 : Lighthouse** — lancer sur le build de production servi localement (`npm start`), sur `/` et une page service. Consigner les 4 scores **tels que mesurés** dans le README (section « Performance »). Ne pas affirmer > 95 sans la mesure.
 
@@ -1648,7 +1650,7 @@ Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>"
 **Couverture du spec :**
 - §2 routes dérivées des données → Tâches 3–8, 15–16 (prerender depuis `SERVICE_SLUGS`/`PROJECT_SLUGS`). ✔
 - §3 stack révisée (React Router 8, Tailwind 4, pas de Helmet) → Tâche 1 + Contraintes globales. ✔
-- §4 les 21 URLs → Tâches 14–20 ; vérification du compte en Tâche 21. ✔
+- §4 les URLs (20 pages de contenu prérendues + route 404 client) → Tâches 14–20 ; vérification du compte en Tâche 21. ✔
 - §5 couche de données + `ImageAsset` contraint → Tâches 2–5. ✔
 - §6 design (palette, typo, glassmorphisme ciblé) → Tâche 1 (`@theme`) + Tâches 9–12. ✔
 - §7 animations (MotionConfig reduced-motion) → root.tsx (Tâche 1) + `Reveal`/`Hero` (Tâche 12). ✔
