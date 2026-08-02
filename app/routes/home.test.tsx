@@ -13,10 +13,10 @@ test("le hero contient un h1 unique et les deux CTA", () => {
   const devisLinks = screen.getAllByRole("link", { name: /demander un devis/i });
   expect(devisLinks.length).toBeGreaterThanOrEqual(1);
   devisLinks.forEach((l) => expect(l).toHaveAttribute("href", "/devis"));
-  expect(screen.getByRole("link", { name: /nos réalisations/i })).toHaveAttribute(
-    "href",
-    "/realisations",
-  );
+  // Le hero propose « Nos réalisations » (le pied de section « Voir toutes nos réalisations » pointe aussi vers /realisations).
+  const realisationsLinks = screen.getAllByRole("link", { name: /nos réalisations/i });
+  expect(realisationsLinks.length).toBeGreaterThanOrEqual(1);
+  realisationsLinks.forEach((l) => expect(l).toHaveAttribute("href", "/realisations"));
 });
 
 test("meta déclare un titre et un JSON-LD LocalBusiness", () => {
