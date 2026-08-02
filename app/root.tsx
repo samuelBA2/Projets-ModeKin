@@ -1,6 +1,7 @@
 import { isRouteErrorResponse, Links, Meta, Outlet, Scripts, ScrollRestoration } from "react-router";
 import { MotionConfig } from "framer-motion";
 import type { Route } from "./+types/root";
+import { PageLayout } from "~/components/layout/PageLayout";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }];
@@ -32,7 +33,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <MotionConfig reducedMotion="user">
-      <Outlet />
+      <PageLayout>
+        <Outlet />
+      </PageLayout>
     </MotionConfig>
   );
 }
