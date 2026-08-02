@@ -47,7 +47,7 @@ export function Accordion({ items }: AccordionProps) {
                 aria-expanded={isOpen}
                 aria-controls={panelId}
                 onClick={() => toggle(index)}
-                className="flex min-h-11 w-full items-center justify-between gap-4 py-4 text-left font-medium text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+                className="flex min-h-11 w-full items-center justify-between gap-4 py-4 text-left font-medium text-ink"
               >
                 <span>{item.question}</span>
                 <ChevronDown

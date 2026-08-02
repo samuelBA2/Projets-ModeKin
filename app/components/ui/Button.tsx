@@ -21,8 +21,10 @@ const VARIANT_CLASSES: Record<ButtonVariant, string> = {
   ghost: "bg-transparent text-navy hover:bg-muted",
 };
 
+// Le focus visible (anneau doré) est géré globalement par la règle
+// `:focus-visible` de app/app.css : inutile de la dupliquer ici.
 const BASE_CLASSES =
-  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-sans font-medium transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex min-h-11 items-center justify-center gap-2 rounded-xl px-5 py-2.5 font-sans font-medium transition-colors disabled:pointer-events-none disabled:opacity-50";
 
 /**
  * Bouton d'action réutilisable. Rend un `<Link>` react-router quand
