@@ -13,8 +13,14 @@ type Status = "idle" | "sending" | "success" | "error";
 const BUDGETS = ["Moins de 1 000 €", "1 000 – 5 000 €", "5 000 – 15 000 €", "Plus de 15 000 €"];
 const DELAIS = ["Dès que possible", "Sous 1 mois", "1 à 3 mois", "Plus de 3 mois"];
 
-export function DevisForm() {
+type DevisFormProps = {
+  /** Prestation pré-sélectionnée (ex. depuis `?service=` sur la page devis). */
+  defaultService?: string;
+};
+
+export function DevisForm({ defaultService = "" }: DevisFormProps) {
   const [status, setStatus] = useState<Status>("idle");
+  const validService = services.some((s) => s.slug === defaultService) ? defaultService : "";
   const {
     register,
     handleSubmit,
@@ -28,7 +34,7 @@ export function DevisForm() {
       name: "",
       phone: "",
       email: "",
-      service: "",
+      service: validService,
       description: "",
       budget: "",
       delay: "",
@@ -80,7 +86,7 @@ export function DevisForm() {
 
       <FormField id="devis-service" label="Prestation souhaitée" required error={errors.service?.message}>
         {(a) => (
-          <select className={CONTROL_CLASSES} defaultValue="" {...a} {...register("service")}>
+          <select className={CONTROL_CLASSES} {...a} {...register("service")}>
             <option value="" disabled>
               Choisir une prestation…
             </option>
