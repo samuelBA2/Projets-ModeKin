@@ -43,6 +43,7 @@ export default function Tarifs() {
       <section className="bg-bg py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <SectionHeading
+            as="h1"
             title="Nos offres"
             subtitle="Une formule pour chaque type de projet. Les prix sont indicatifs et ajustés selon le projet réel après visite."
           />

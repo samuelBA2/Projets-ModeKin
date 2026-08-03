@@ -44,6 +44,7 @@ export default function Contact() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <SectionHeading
+            as="h1"
             align="left"
             title="Contactez-nous"
             subtitle="Une question, un projet ? Écrivez-nous ou appelez-nous directement."

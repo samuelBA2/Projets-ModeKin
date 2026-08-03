@@ -51,6 +51,7 @@ export default function Realisations() {
       <section className="bg-bg py-12 sm:py-16">
         <div className="mx-auto max-w-6xl px-6 sm:px-8">
           <SectionHeading
+            as="h1"
             title="Nos réalisations"
             subtitle="Un aperçu de nos chantiers récents à Kinshasa, du premier croquis à la livraison."
           />
