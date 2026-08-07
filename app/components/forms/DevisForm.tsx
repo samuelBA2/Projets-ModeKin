@@ -10,7 +10,7 @@ import { FormField, CONTROL_CLASSES } from "~/components/ui/FormField";
 
 type Status = "idle" | "sending" | "success" | "error";
 
-const BUDGETS = ["Moins de 1 000 €", "1 000 – 5 000 €", "5 000 – 15 000 €", "Plus de 15 000 €"];
+const BUDGETS = ["Moins de 1 000 $", "1 000 – 5 000 $", "5 000 – 15 000 $", "Plus de 15 000 $"];
 const DELAIS = ["Dès que possible", "Sous 1 mois", "1 à 3 mois", "Plus de 3 mois"];
 
 type DevisFormProps = {

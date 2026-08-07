@@ -17,7 +17,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Standard",
-    price: "À partir de — €",
+    price: "À partir de — $",
     tagline: "L'essentiel bien exécuté pour un chantier maîtrisé.",
     features: [
       "Devis détaillé poste par poste",
