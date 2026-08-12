@@ -7,15 +7,15 @@ export const SITE: SiteConfig = {
   url: "https://www.modekin.com", // ⚠️ domaine de production, sans slash final
   description:
     "Mode Kin, entreprise de travaux du bâtiment : décoration intérieure, peinture, carrelage, plomberie et menuiserie.",
-  phone: "+243000000000", // ⚠️ téléphone réel
-  email: "contact@modekin.com", // ⚠️ email réel
-  whatsapp: "243000000000", // ⚠️ WhatsApp, format international sans +
+  phone: "+243 837165780",
+  email: "modekinsarl@gmail.com",
+  whatsapp: "243837165780", // format international sans +
   address: {
-    street: "Avenue à compléter", // ⚠️
-    city: "Kinshasa", // ⚠️
-    region: "Kinshasa", // ⚠️
-    postalCode: "", // ⚠️
-    country: "RD Congo", // ⚠️
+    street: "15ᵉ Rue, Poids Lourds, Limete",
+    city: "Kinshasa",
+    region: "Kinshasa", // ville-province de Kinshasa
+    postalCode: "",
+    country: "RD Congo",
   },
   geo: { lat: -4.325, lng: 15.322 }, // ⚠️ coordonnées réelles
   hours: [

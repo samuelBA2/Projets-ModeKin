@@ -20,7 +20,7 @@ export default function MentionsLegales() {
       <h2>Éditeur du site</h2>
       <p>
         Le présent site est édité par {SITE.legalName} (« {SITE.name} »), entreprise de travaux du
-        bâtiment. Adresse : {address.street}, {address.city}, {address.region}, {address.country}.
+        bâtiment. Adresse : {address.street}, {address.city}, {address.country}.
         Téléphone : {SITE.phone}. Email : {SITE.email}.
       </p>
 

@@ -77,7 +77,7 @@ export default function Contact() {
                   <div>
                     <p className="text-sm font-medium text-ink">Adresse</p>
                     <p className="text-ink/75">
-                      {address.street}, {address.city}, {address.region}, {address.country}
+                      {address.street}, {address.city}, {address.country}
                     </p>
                   </div>
                 </li>
