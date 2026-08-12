@@ -20,6 +20,7 @@ type DevisFormProps = {
 
 export function DevisForm({ defaultService = "" }: DevisFormProps) {
   const [status, setStatus] = useState<Status>("idle");
+  const [waUrl, setWaUrl] = useState("");
   const validService = services.some((s) => s.slug === defaultService) ? defaultService : "";
   const {
     register,
@@ -52,6 +53,7 @@ export function DevisForm({ defaultService = "" }: DevisFormProps) {
     try {
       const res = await submitForm("devis", values);
       if (res.ok) {
+        setWaUrl(res.url);
         setStatus("success");
         reset();
       } else {
@@ -147,18 +149,33 @@ export function DevisForm({ defaultService = "" }: DevisFormProps) {
         </Button>
       </div>
 
-      <p aria-live="polite" className="text-sm">
+      <div aria-live="polite" className="text-sm">
         {status === "success" && (
-          <span className="font-medium text-green-700">
-            Merci, votre demande de devis a bien été envoyée. Nous revenons vers vous rapidement.
-          </span>
+          <p className="font-medium text-green-700">
+            WhatsApp s'est ouvert avec votre demande. Appuyez sur <strong>Envoyer</strong> pour
+            finaliser.{" "}
+            {waUrl && (
+              <>
+                Si rien ne s'est ouvert,{" "}
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-gold underline underline-offset-4"
+                >
+                  cliquez ici pour ouvrir WhatsApp
+                </a>
+                .
+              </>
+            )}
+          </p>
         )}
         {status === "error" && (
-          <span className="font-medium text-red-700">
+          <p className="font-medium text-red-700">
             Une erreur est survenue. Merci de réessayer ou de nous appeler directement.
-          </span>
+          </p>
         )}
-      </p>
+      </div>
     </form>
   );
 }

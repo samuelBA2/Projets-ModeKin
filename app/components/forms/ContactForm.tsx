@@ -12,6 +12,7 @@ type Status = "idle" | "sending" | "success" | "error";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [waUrl, setWaUrl] = useState("");
   const {
     register,
     handleSubmit,
@@ -34,6 +35,7 @@ export function ContactForm() {
     try {
       const res = await submitForm("contact", values);
       if (res.ok) {
+        setWaUrl(res.url);
         setStatus("success");
         reset();
       } else {
@@ -94,18 +96,33 @@ export function ContactForm() {
       </div>
 
       {/* État d'envoi annoncé aux lecteurs d'écran. */}
-      <p aria-live="polite" className="text-sm">
+      <div aria-live="polite" className="text-sm">
         {status === "success" && (
-          <span className="font-medium text-green-700">
-            Merci, votre message a bien été envoyé. Nous vous recontactons rapidement.
-          </span>
+          <p className="font-medium text-green-700">
+            WhatsApp s'est ouvert avec votre message. Appuyez sur <strong>Envoyer</strong> pour
+            finaliser.{" "}
+            {waUrl && (
+              <>
+                Si rien ne s'est ouvert,{" "}
+                <a
+                  href={waUrl}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="text-gold underline underline-offset-4"
+                >
+                  cliquez ici pour ouvrir WhatsApp
+                </a>
+                .
+              </>
+            )}
+          </p>
         )}
         {status === "error" && (
-          <span className="font-medium text-red-700">
+          <p className="font-medium text-red-700">
             Une erreur est survenue. Merci de réessayer ou de nous appeler directement.
-          </span>
+          </p>
         )}
-      </p>
+      </div>
     </form>
   );
 }
