@@ -23,8 +23,8 @@ export const SITE: SiteConfig = {
     { days: "Samedi", open: "09:00 – 13:00" }, // ⚠️
   ],
   socials: [
-    { label: "Facebook", href: "https://facebook.com/" }, // ⚠️
-    { label: "Instagram", href: "https://instagram.com/" }, // ⚠️
+    { label: "Facebook", href: "https://www.facebook.com/profile.php?id=100063904751353" },
+    { label: "Instagram", href: "https://instagram.com/" }, // ⚠️ lien Instagram réel à fournir
   ],
   mapsUrl: "https://www.google.com/maps", // ⚠️ lien Google Maps de l'établissement
   stats: [
