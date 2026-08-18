@@ -4,7 +4,10 @@ import type { Route } from "./+types/root";
 import { PageLayout } from "~/components/layout/PageLayout";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [{ rel: "icon", href: "/favicon.svg", type: "image/svg+xml" }];
+export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/favicon.png", type: "image/png" },
+  { rel: "apple-touch-icon", href: "/favicon.png" },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
