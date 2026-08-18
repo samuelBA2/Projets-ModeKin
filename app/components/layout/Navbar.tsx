@@ -37,8 +37,8 @@ export function Navbar() {
 
   const navContent: ReactNode = (
     <nav aria-label="Navigation principale" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-      <Link to="/" className="font-serif text-xl font-semibold text-navy">
-        Mode Kin
+      <Link to="/" className="flex items-center" aria-label="Mode Kin — accueil">
+        <img src="/logo.png" alt="Mode Kin" width={500} height={500} className="h-12 w-auto" />
       </Link>
 
       <ul className="hidden items-center gap-6 md:flex">
