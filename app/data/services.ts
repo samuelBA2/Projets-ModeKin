@@ -11,9 +11,9 @@ export const services: Service[] = [
       "Mode Kin conçoit et réalise votre décoration intérieure : conseil en agencement, harmonies de couleurs, mobilier et éclairage. Demandez un devis gratuit.",
     heroImage: {
       src: "/images/services/decoration-hero.jpg",
-      alt: "Salon contemporain décoré par Mode Kin",
-      width: 1600,
-      height: 1000,
+      alt: "Salon vert canard décoré par Mode Kin, fauteuils en velours et tapis graphique",
+      width: 736,
+      height: 969,
     },
     intro:
       "La décoration intérieure transforme un logement en lieu de vie. Nos décorateurs vous accompagnent du premier croquis à la pose finale : étude des volumes, choix des matières, palette chromatique et mise en lumière. Chaque projet est pensé pour vous ressembler tout en valorisant durablement votre bien.",
@@ -44,15 +44,15 @@ export const services: Service[] = [
     gallery: [
       {
         src: "/images/services/decoration-1.jpg",
-        alt: "Séjour aux tons chauds réalisé par Mode Kin",
-        width: 1200,
-        height: 900,
+        alt: "Séjour aux tons mauves avec canapé et cadres décoratifs par Mode Kin",
+        width: 736,
+        height: 920,
       },
       {
         src: "/images/services/decoration-2.jpg",
-        alt: "Chambre décorée dans un style épuré",
-        width: 1200,
-        height: 900,
+        alt: "Cage d'escalier aux murs vert canard et menuiseries blanches",
+        width: 736,
+        height: 1104,
       },
     ],
     faq: [
