@@ -198,9 +198,9 @@ export const services: Service[] = [
       },
       {
         src: "/images/services/carrelage-2.jpg",
-        alt: "Cour pavée de pavés autobloquants rouges et gris à motifs",
-        width: 586,
-        height: 586,
+        alt: "Cuisine avec crédence en marbre et sol grès cérame effet marbre par Mode Kin",
+        width: 735,
+        height: 919,
       },
     ],
     faq: [
