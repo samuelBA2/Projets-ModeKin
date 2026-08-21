@@ -106,29 +106,6 @@ export const projects: Project[] = [
       },
     ],
   },
-  {
-    slug: "amenagement-boutique-kintambo",
-    title: "Aménagement intérieur d'une boutique",
-    category: "decoration-interieure",
-    location: "Kintambo, Kinshasa",
-    date: "2024-05-19",
-    description:
-      "Aménagement complet d'un local commercial : agencement de l'espace de vente, mise en lumière des produits, peinture et signalétique. Un intérieur accueillant qui valorise les produits et guide naturellement le visiteur.",
-    images: [
-      {
-        src: "/images/projets/kintambo-1.jpg",
-        alt: "Espace de vente aménagé par Mode Kin",
-        width: 1400,
-        height: 933,
-      },
-      {
-        src: "/images/projets/kintambo-2.jpg",
-        alt: "Mise en lumière des produits en boutique",
-        width: 1400,
-        height: 933,
-      },
-    ],
-  },
 ];
 
 export const PROJECT_SLUGS = projects.map((p) => p.slug);
