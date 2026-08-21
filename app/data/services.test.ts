@@ -6,7 +6,7 @@ test("il y a exactement 5 services aux slugs figés", () => {
     "decoration-interieure",
     "peinture-interieure-exterieure",
     "carrelage",
-    "plomberie",
+    "habillage-mur-television",
     "menuiserie",
   ]);
 });

@@ -41,7 +41,7 @@ export function meta(_: Route.MetaArgs) {
     ...buildMeta({
       title: "Mode Kin — Travaux du bâtiment à Kinshasa",
       description:
-        "Mode Kin, entreprise de bâtiment à Kinshasa : décoration intérieure, peinture, carrelage, plomberie et menuiserie. Un savoir-faire complet pour vos projets. Devis gratuit.",
+        "Mode Kin, entreprise de bâtiment à Kinshasa : décoration intérieure, peinture, carrelage, habillage mur TV et menuiserie. Un savoir-faire complet pour vos projets. Devis gratuit.",
       path: "/",
     }),
     { "script:ld+json": localBusinessSchema() },
@@ -58,9 +58,9 @@ export default function Home() {
     <>
       <Hero
         title="Donnons vie à vos espaces"
-        subtitle="Décoration, peinture, carrelage, plomberie et menuiserie : Mode Kin réunit tous les métiers du bâtiment pour réussir vos projets à Kinshasa."
+        subtitle="Décoration, peinture, carrelage, habillage mur TV et menuiserie : Mode Kin réunit tous les métiers du bâtiment pour réussir vos projets à Kinshasa."
         image={{
-          src: "/images/home-hero.jpg",
+          src: "/images/photo-1618221195710-dd6b41faaea6.avif",
           alt: "Intérieur rénové par Mode Kin",
           width: 1920,
           height: 1080,

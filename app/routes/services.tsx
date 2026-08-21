@@ -15,7 +15,7 @@ export function meta(_: Route.MetaArgs) {
     ...buildMeta({
       title: "Nos services — Travaux du bâtiment | Mode Kin",
       description:
-        "Découvrez les services de Mode Kin à Kinshasa : décoration intérieure, peinture, carrelage, plomberie et menuiserie. Un savoir-faire complet pour vos projets.",
+        "Découvrez les services de Mode Kin à Kinshasa : décoration intérieure, peinture, carrelage, habillage mur TV et menuiserie. Un savoir-faire complet pour vos projets.",
       path: "/services",
     }),
     {

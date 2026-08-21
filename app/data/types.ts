@@ -4,7 +4,7 @@ export type ServiceSlug =
   | "decoration-interieure"
   | "peinture-interieure-exterieure"
   | "carrelage"
-  | "plomberie"
+  | "habillage-mur-television"
   | "menuiserie";
 
 export type Benefit = { iconName: string; title: string; text: string };

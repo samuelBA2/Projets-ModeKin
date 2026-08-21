@@ -16,7 +16,7 @@ export function meta(_: Route.MetaArgs) {
     ...buildMeta({
       title: "Nos réalisations — Chantiers à Kinshasa | Mode Kin",
       description:
-        "Découvrez les réalisations de Mode Kin à Kinshasa : rénovations, décoration, carrelage, plomberie et menuiserie. Des chantiers qui illustrent notre savoir-faire.",
+        "Découvrez les réalisations de Mode Kin à Kinshasa : rénovations, décoration, carrelage, habillage mur TV et menuiserie. Des chantiers qui illustrent notre savoir-faire.",
       path: "/realisations",
     }),
     {

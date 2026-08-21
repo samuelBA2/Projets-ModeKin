@@ -11,7 +11,7 @@ export function meta(_: Route.MetaArgs) {
     ...buildMeta({
       title: "Demander un devis gratuit | Mode Kin",
       description:
-        "Décrivez votre projet et recevez un devis gratuit et sans engagement de Mode Kin à Kinshasa : décoration, peinture, carrelage, plomberie, menuiserie.",
+        "Décrivez votre projet et recevez un devis gratuit et sans engagement de Mode Kin à Kinshasa : décoration, peinture, carrelage, habillage mur TV, menuiserie.",
       path: "/devis",
     }),
     {

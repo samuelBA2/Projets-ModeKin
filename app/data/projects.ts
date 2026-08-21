@@ -84,23 +84,23 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "installation-sanitaire-lemba",
-    title: "Installation sanitaire d'une maison neuve",
-    category: "plomberie",
+    slug: "habillage-mur-tv-lemba",
+    title: "Habillage d'un mur télévision",
+    category: "habillage-mur-television",
     location: "Lemba, Kinshasa",
     date: "2024-09-12",
     description:
-      "Réalisation complète du réseau d'eau d'une maison neuve : arrivées, évacuations, pose des sanitaires et raccordement du chauffe-eau. Chaque raccord a été testé sous pression pour garantir une étanchéité irréprochable.",
+      "Conception et réalisation d'un mur télévision décoratif dans le séjour : habillage en panneaux, niche pour l'écran, rangements intégrés et éclairage LED d'ambiance. Un point focal élégant qui structure toute la pièce de vie.",
     images: [
       {
-        src: "/images/projets/lemba-1.jpg",
-        alt: "Réseau de plomberie neuf installé par Mode Kin",
+        src: "/images/projets/habillage-tv-1.jpg",
+        alt: "⚠️ Placeholder — mur télévision décoratif réalisé par Mode Kin (photo réelle à fournir)",
         width: 1400,
         height: 933,
       },
       {
-        src: "/images/projets/lemba-2.jpg",
-        alt: "Sanitaires posés et raccordés dans la maison de Lemba",
+        src: "/images/projets/habillage-tv-2.jpg",
+        alt: "⚠️ Placeholder — détail de l'éclairage LED du mur TV (photo réelle à fournir)",
         width: 1400,
         height: 933,
       },

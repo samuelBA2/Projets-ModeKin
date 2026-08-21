@@ -6,7 +6,7 @@ export const SITE: SiteConfig = {
   legalName: "Mode Kin SARL", // ⚠️ raison sociale exacte
   url: "https://www.modekin.com", // ⚠️ domaine de production, sans slash final
   description:
-    "Mode Kin, entreprise de travaux du bâtiment : décoration intérieure, peinture, carrelage, plomberie et menuiserie.",
+    "Mode Kin, entreprise de travaux du bâtiment : décoration intérieure, peinture, carrelage, habillage mur TV et menuiserie.",
   phone: "+243 837165780",
   email: "modekinsarl@gmail.com",
   whatsapp: "243837165780", // format international sans +
