@@ -232,9 +232,9 @@ export const services: Service[] = [
       "Mode Kin conçoit et réalise votre mur télévision décoratif : habillage en panneaux, pierre, bois et lamelles, niches et éclairage LED intégré. Demandez un devis gratuit.",
     heroImage: {
       src: "/images/services/habillage-hero.jpg",
-      alt: "Mur télévision décoratif réalisé par Mode Kin",
-      width: 1600,
-      height: 1000,
+      alt: "Mur télévision en lamelles de bois avec vitrine éclairée par Mode Kin",
+      width: 736,
+      height: 981,
     },
     intro:
       "Le mur de la télévision est devenu la pièce maîtresse du salon. Mode Kin conçoit des habillages sur mesure qui structurent l'espace et mettent votre écran en valeur : panneaux muraux, parement en pierre ou en bois, lamelles décoratives, niches de rangement et éclairage LED d'ambiance. Un rendu haut de gamme, du dessin à la pose.",
@@ -266,15 +266,21 @@ export const services: Service[] = [
     gallery: [
       {
         src: "/images/services/habillage-1.jpg",
-        alt: "Mur TV habillé de panneaux décoratifs par Mode Kin",
-        width: 1200,
-        height: 900,
+        alt: "Mur TV en lamelles bois et panneau marbre avec meuble suspendu par Mode Kin",
+        width: 736,
+        height: 981,
       },
       {
         src: "/images/services/habillage-2.jpg",
-        alt: "Mur télévision en parement de pierre avec éclairage LED",
-        width: 1200,
-        height: 900,
+        alt: "Mur télévision gris à panneau marbre et éclairage LED d'ambiance",
+        width: 736,
+        height: 920,
+      },
+      {
+        src: "/images/services/habillage-3.jpg",
+        alt: "Mur télévision en lamelles sombres rétroéclairées avec meuble bas",
+        width: 736,
+        height: 552,
       },
     ],
     faq: [

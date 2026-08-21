@@ -1,9 +1,9 @@
 import { projects, getProject, PROJECT_SLUGS, getProjectsByCategory } from "./projects";
 import { SERVICE_SLUGS } from "./services";
 
-test("il y a 6 projets aux slugs uniques", () => {
-  expect(projects).toHaveLength(6);
-  expect(new Set(PROJECT_SLUGS).size).toBe(6);
+test("il y a 5 projets aux slugs uniques", () => {
+  expect(projects).toHaveLength(5);
+  expect(new Set(PROJECT_SLUGS).size).toBe(5);
 });
 test("la catégorie de chaque projet référence un service réel", () => {
   for (const p of projects) expect(SERVICE_SLUGS).toContain(p.category);
