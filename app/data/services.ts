@@ -84,9 +84,9 @@ export const services: Service[] = [
       "Mode Kin réalise vos travaux de peinture intérieure et extérieure : préparation des supports, peinture décorative, ravalement de façade et traitement anti-humidité. Devis gratuit.",
     heroImage: {
       src: "/images/services/peinture-hero.jpg",
-      alt: "Peintre de Mode Kin appliquant une couche de finition sur un mur",
-      width: 1600,
-      height: 1000,
+      alt: "Chambre aux murs peints en vert canard et gris avec décoration colorée par Mode Kin",
+      width: 720,
+      height: 1280,
     },
     intro:
       "Une belle peinture commence par une préparation irréprochable. Nos peintres traitent d'abord les supports — rebouchage, ponçage, enduit — avant d'appliquer des produits adaptés à chaque pièce et à chaque exposition. À l'extérieur, nous protégeons durablement vos façades contre l'humidité et les intempéries.",
@@ -118,15 +118,15 @@ export const services: Service[] = [
     gallery: [
       {
         src: "/images/services/peinture-1.jpg",
-        alt: "Mur intérieur fraîchement peint dans un ton clair",
-        width: 1200,
-        height: 900,
+        alt: "Façade extérieure à l'enduit crépi brun avec soubassement en pierre",
+        width: 736,
+        height: 736,
       },
       {
         src: "/images/services/peinture-2.jpg",
-        alt: "Façade de maison ravalée par Mode Kin",
-        width: 1200,
-        height: 900,
+        alt: "Mur de clôture à l'enduit texturé bicolore réalisé par Mode Kin",
+        width: 736,
+        height: 981,
       },
     ],
     faq: [
@@ -158,9 +158,9 @@ export const services: Service[] = [
       "Mode Kin pose votre carrelage sol et mur : faïence, mosaïque, grès cérame, joints et étanchéité, rénovation de salle de bain. Travail précis et durable. Devis gratuit.",
     heroImage: {
       src: "/images/services/carrelage-hero.jpg",
-      alt: "Carreleur de Mode Kin alignant des carreaux au sol",
-      width: 1600,
-      height: 1000,
+      alt: "Escalier habillé de marbre par Mode Kin, murs à moulures et rampe noire",
+      width: 736,
+      height: 1308,
     },
     intro:
       "Le carrelage se joue au millimètre. Nos carreleurs préparent la chape, calibrent les découpes et soignent l'alignement des joints pour un rendu impeccable et pérenne. Nous portons une attention particulière à l'étanchéité des sols et des pièces d'eau, gage de tranquillité pour les années à venir.",
@@ -192,15 +192,15 @@ export const services: Service[] = [
     gallery: [
       {
         src: "/images/services/carrelage-1.jpg",
-        alt: "Sol carrelé en grès cérame posé par Mode Kin",
-        width: 1200,
-        height: 900,
+        alt: "Couloir au sol en marbre blanc et murs à moulures posé par Mode Kin",
+        width: 736,
+        height: 981,
       },
       {
         src: "/images/services/carrelage-2.jpg",
-        alt: "Faïence murale d'une salle de bain rénovée",
-        width: 1200,
-        height: 900,
+        alt: "Cour pavée de pavés autobloquants rouges et gris à motifs",
+        width: 586,
+        height: 586,
       },
     ],
     faq: [
