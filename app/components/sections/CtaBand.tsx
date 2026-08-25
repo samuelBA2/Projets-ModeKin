@@ -12,7 +12,7 @@ export function CtaBand({
   subtitle = "Demandez votre devis gratuit et sans engagement, sous 48 h.",
 }: CtaBandProps) {
   return (
-    <section className="bg-navy py-16 text-white">
+    <section className="bg-black py-16 text-white">
       <div className="mx-auto max-w-2xl px-6 text-center sm:px-8">
         <Reveal>
           <h2 className="font-serif text-3xl font-semibold sm:text-4xl">{title}</h2>

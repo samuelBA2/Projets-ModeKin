@@ -192,7 +192,6 @@ export default function ServiceDetail() {
                     />
                     <div className="p-5">
                       <h3 className="font-serif text-lg font-semibold text-navy">{p.title}</h3>
-                      <p className="mt-1 text-sm text-ink/60">{p.location}</p>
                     </div>
                   </Card>
                 </Link>

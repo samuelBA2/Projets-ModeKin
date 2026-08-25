@@ -75,7 +75,7 @@ export default function Home() {
           <Reveal>
             <SectionHeading
               title="L'artisanat du bâtiment, de bout en bout"
-              subtitle="Depuis plus de dix ans, Mode Kin accompagne particuliers et professionnels de Kinshasa dans leurs travaux de construction, de rénovation et d'aménagement."
+              subtitle="Depuis plus de cinq ans, Mode Kin accompagne particuliers et professionnels de Kinshasa dans leurs travaux de construction, de rénovation et d'aménagement."
             />
             <p className="mt-6 text-ink/75">
               Réunir tous les corps de métier sous une même enseigne, c'est vous garantir un
@@ -136,7 +136,6 @@ export default function Home() {
                     />
                     <div className="p-5">
                       <h3 className="font-serif text-lg font-semibold text-navy">{p.title}</h3>
-                      <p className="mt-1 text-sm text-ink/60">{p.location}</p>
                     </div>
                   </Card>
                 </Link>

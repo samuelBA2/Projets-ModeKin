@@ -1,18 +1,19 @@
 import { services, getService, SERVICE_SLUGS } from "./services";
 
-test("il y a exactement 5 services aux slugs figés", () => {
-  expect(services).toHaveLength(5);
+test("il y a exactement 6 services aux slugs figés", () => {
+  expect(services).toHaveLength(6);
   expect(SERVICE_SLUGS).toEqual([
     "decoration-interieure",
     "peinture-interieure-exterieure",
     "carrelage",
     "habillage-mur-television",
     "menuiserie",
+    "decoration-cuisine",
   ]);
 });
 
 test("les slugs sont uniques", () => {
-  expect(new Set(services.map((s) => s.slug)).size).toBe(5);
+  expect(new Set(services.map((s) => s.slug)).size).toBe(6);
 });
 
 test("chaque relatedSlug pointe vers un service existant et jamais vers soi-même", () => {

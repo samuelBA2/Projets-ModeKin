@@ -86,7 +86,6 @@ export default function Realisations() {
                       <div className="p-5">
                         {service && <p className="text-xs font-medium uppercase tracking-wide text-gold">{service.title}</p>}
                         <h2 className="mt-1 font-serif text-lg font-semibold text-navy">{p.title}</h2>
-                        <p className="mt-1 text-sm text-ink/60">{p.location}</p>
                       </div>
                     </Card>
                   </Link>

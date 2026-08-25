@@ -1,18 +1,18 @@
 import { projects, getProject, PROJECT_SLUGS, getProjectsByCategory } from "./projects";
 import { SERVICE_SLUGS } from "./services";
 
-test("il y a 4 projets aux slugs uniques", () => {
-  expect(projects).toHaveLength(4);
-  expect(new Set(PROJECT_SLUGS).size).toBe(4);
+test("il y a 5 projets aux slugs uniques", () => {
+  expect(projects).toHaveLength(5);
+  expect(new Set(PROJECT_SLUGS).size).toBe(5);
 });
 test("la catégorie de chaque projet référence un service réel", () => {
   for (const p of projects) expect(SERVICE_SLUGS).toContain(p.category);
 });
-test("chaque projet a au moins 2 images valides, un lieu et une date ISO", () => {
+test("chaque projet a au moins 2 images valides et une date ISO ; le lieu, s'il est présent, est non vide", () => {
   for (const p of projects) {
     expect(p.images.length).toBeGreaterThanOrEqual(2);
     p.images.forEach((i) => expect(i.alt.trim() && i.width && i.height).toBeTruthy());
-    expect(p.location.trim().length).toBeGreaterThan(0);
+    if (p.location !== undefined) expect(p.location.trim().length).toBeGreaterThan(0);
     expect(p.date).toMatch(/^\d{4}-\d{2}-\d{2}$/);
   }
 });

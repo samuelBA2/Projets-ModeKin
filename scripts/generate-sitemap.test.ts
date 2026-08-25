@@ -9,8 +9,8 @@ test("le sitemap contient les 18 URLs attendues", () => {
   SERVICE_SLUGS.forEach((s) => expect(urls).toContain(`/services/${s}`));
   PROJECT_SLUGS.forEach((s) => expect(urls).toContain(`/realisations/${s}`));
   expect(urls).toContain("/devis");
-  // 9 statiques indexables + 5 services + 4 projets = 18 URLs de contenu
-  expect(urls).toHaveLength(18);
+  // 9 statiques indexables + 6 services + 5 projets = 20 URLs de contenu
+  expect(urls).toHaveLength(20);
   expect(new Set(urls).size).toBe(urls.length); // pas de doublon
 });
 test("le XML rendu est bien formé et absolu", () => {

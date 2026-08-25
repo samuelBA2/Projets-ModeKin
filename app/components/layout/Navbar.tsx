@@ -3,7 +3,6 @@ import { Link, useLocation } from "react-router";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "~/components/ui/Button";
-import { GlassPanel } from "~/components/ui/GlassPanel";
 
 const NAV_LINKS = [
   { label: "Accueil", to: "/" },
@@ -38,13 +37,13 @@ export function Navbar() {
   const navContent: ReactNode = (
     <nav aria-label="Navigation principale" className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
       <Link to="/" className="flex items-center" aria-label="Mode Kin — accueil">
-        <img src="/logo.png" alt="Mode Kin" width={500} height={500} className="h-12 w-auto" />
+        <img src="/logo.png" alt="Mode Kin" width={500} height={500} className="h-16 w-auto" />
       </Link>
 
       <ul className="hidden items-center gap-6 md:flex">
         {NAV_LINKS.map((link) => (
           <li key={link.to}>
-            <Link to={link.to} className="font-medium text-ink hover:text-gold">
+            <Link to={link.to} className="font-medium text-white hover:text-gold">
               {link.label}
             </Link>
           </li>
@@ -63,7 +62,7 @@ export function Navbar() {
         aria-expanded={isOpen}
         aria-controls="menu-mobile"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl text-navy md:hidden"
+        className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-xl text-white md:hidden"
       >
         {isOpen ? <X aria-hidden="true" className="size-6" /> : <Menu aria-hidden="true" className="size-6" />}
       </button>
@@ -73,9 +72,9 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-40 transition-colors duration-300">
       {isScrolled ? (
-        <GlassPanel className="rounded-none border-x-0 border-t-0">{navContent}</GlassPanel>
+        <div className="bg-black shadow-lg">{navContent}</div>
       ) : (
-        <div className="bg-transparent">{navContent}</div>
+        <div className="bg-black">{navContent}</div>
       )}
 
       <AnimatePresence initial={false}>

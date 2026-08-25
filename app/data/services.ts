@@ -311,10 +311,10 @@ export const services: Service[] = [
     metaDescription:
       "Mode Kin conçoit vos menuiseries sur mesure : portes et fenêtres, placards, dressing, parquet et agencement bois. Fabrication soignée et pose précise. Devis gratuit.",
     heroImage: {
-      src: "/images/services/menuiserie-hero.jpg",
-      alt: "Menuisier de Mode Kin ajustant un aménagement en bois sur mesure",
-      width: 1600,
-      height: 1000,
+      src: "/images/services/meuble-tv-2.jpg",
+      alt: "Meuble TV en bois sur mesure fabriqué dans l'atelier de Mode Kin",
+      width: 736,
+      height: 981,
     },
     intro:
       "Le bois apporte chaleur et durabilité à vos intérieurs. Notre atelier conçoit des menuiseries sur mesure — portes, fenêtres, placards, dressings et agencements — ajustées au millimètre à vos espaces. De la prise de cotes à la pose finale, nous soignons chaque assemblage et chaque finition.",
@@ -345,16 +345,88 @@ export const services: Service[] = [
     ],
     gallery: [
       {
-        src: "/images/services/menuiserie-1.jpg",
-        alt: "Dressing sur mesure en bois réalisé par Mode Kin",
-        width: 1200,
-        height: 900,
+        src: "/images/services/meuble-tv-1.jpg",
+        alt: "Meuble TV en bois avec façade blanche, vue de dessus",
+        width: 640,
+        height: 839,
       },
       {
-        src: "/images/services/menuiserie-2.jpg",
-        alt: "Parquet en bois posé dans un séjour",
-        width: 1200,
-        height: 900,
+        src: "/images/services/meuble-tv-2.jpg",
+        alt: "Meuble TV en bois et gris anthracite sur pieds métal, en atelier",
+        width: 736,
+        height: 981,
+      },
+      {
+        src: "/images/services/meuble-tv-3.jpg",
+        alt: "Meuble TV en bois avec niches et tiroirs, présenté en showroom",
+        width: 736,
+        height: 981,
+      },
+      {
+        src: "/images/services/meuble-tv-4.jpg",
+        alt: "Meuble TV en bois avec portes blanches et tiroirs sur pieds métal",
+        width: 736,
+        height: 736,
+      },
+      {
+        src: "/images/projets/portes/porte-1.jpg",
+        alt: "Porte intérieure en bois à quatre panneaux avec imposte vitrée",
+        width: 720,
+        height: 1280,
+      },
+      {
+        src: "/images/projets/portes/porte-2.jpg",
+        alt: "Porte en bois massif à cinq panneaux, finition vernie",
+        width: 2560,
+        height: 2560,
+      },
+      {
+        src: "/images/projets/portes/porte-3.jpg",
+        alt: "Porte d'intérieur en bois à rainures horizontales, ouverte sur un couloir",
+        width: 1024,
+        height: 1024,
+      },
+      {
+        src: "/images/projets/portes/porte-4.jpg",
+        alt: "Porte en bois à rainures courbes noires dans un couloir",
+        width: 736,
+        height: 1160,
+      },
+      {
+        src: "/images/projets/portes/porte-5.jpg",
+        alt: "Porte pivotante à lames horizontales avec longue poignée en inox",
+        width: 720,
+        height: 1280,
+      },
+      {
+        src: "/images/projets/portes/porte-6.jpg",
+        alt: "Couloir équipé de plusieurs portes en chêne clair et boiseries blanches",
+        width: 736,
+        height: 980,
+      },
+      {
+        src: "/images/projets/portes/porte-7.jpg",
+        alt: "Porte en bois foncé à rainures concentriques avec poignée dorée",
+        width: 720,
+        height: 889,
+      },
+      {
+        src: "/images/projets/portes/porte-8.jpg",
+        alt: "Porte en chêne à motif géométrique de rainures noires",
+        width: 1254,
+        height: 1254,
+      },
+      {
+        src: "/images/projets/portes/porte-9.jpg",
+        alt: "Porte d'entrée double en bois à lames horizontales avec poignée verticale",
+        width: 600,
+        height: 600,
+      },
+      {
+        src: "/images/projets/portes/porte-10.jpg",
+        alt: "Porte en chêne à rainures horizontales avec poignée dorée",
+        width: 960,
+        height: 1280,
       },
     ],
     faq: [
@@ -375,6 +447,110 @@ export const services: Service[] = [
       },
     ],
     relatedSlugs: ["decoration-interieure", "carrelage", "peinture-interieure-exterieure"],
+  },
+  {
+    slug: "decoration-cuisine",
+    title: "Décoration cuisine",
+    shortDescription:
+      "Conception, habillage et finitions de cuisines sur mesure : façades, plans de travail, crédences et éclairage.",
+    metaTitle: "Décoration & aménagement de cuisine à Kinshasa | Mode Kin",
+    metaDescription:
+      "Mode Kin conçoit et aménage votre cuisine sur mesure : façades laquées ou mates, plans de travail, crédences, revêtements et éclairage LED. Devis gratuit.",
+    heroImage: {
+      src: "/images/cuisine/cuisine-1.jpg",
+      alt: "Cuisine blanche laquée avec plan de travail bois réalisée par Mode Kin",
+      width: 736,
+      height: 735,
+    },
+    intro:
+      "La cuisine est la pièce maîtresse de la maison. Nos équipes conçoivent et aménagent votre cuisine de A à Z : implantation optimisée, façades laquées ou mates, plans de travail, crédences et revêtements muraux, jusqu'à la mise en lumière. Chaque projet est pensé pour allier esthétique, praticité et durabilité.",
+    benefits: [
+      {
+        iconName: "Ruler",
+        title: "Agencement optimisé",
+        text: "Une implantation étudiée pour un plan de travail fonctionnel et un rangement généreux.",
+      },
+      {
+        iconName: "Layers",
+        title: "Revêtements soignés",
+        text: "Crédences, plans de travail et habillages muraux sélectionnés pour la tenue et le style.",
+      },
+      {
+        iconName: "Sparkles",
+        title: "Finitions & éclairage",
+        text: "Façades impeccables et éclairage LED pour une cuisine à la fois chaleureuse et moderne.",
+      },
+    ],
+    prestations: [
+      "Conception et implantation de la cuisine",
+      "Pose de meubles hauts et bas sur mesure",
+      "Plans de travail (bois, stratifié, pierre)",
+      "Crédences et revêtements muraux",
+      "Habillage et décoration des façades",
+      "Éclairage d'ambiance et sous-meubles LED",
+    ],
+    gallery: [
+      {
+        src: "/images/cuisine/cuisine-1.jpg",
+        alt: "Cuisine blanche laquée avec plan de travail bois et four encastré",
+        width: 736,
+        height: 735,
+      },
+      {
+        src: "/images/cuisine/cuisine-2.jpg",
+        alt: "Cuisine grise mate avec crédence bois et électroménager intégré",
+        width: 736,
+        height: 981,
+      },
+      {
+        src: "/images/cuisine/cuisine-3.jpg",
+        alt: "Cuisine anthracite avec crédence bois clair et sol parquet",
+        width: 736,
+        height: 981,
+      },
+      {
+        src: "/images/cuisine/cuisine-4.jpg",
+        alt: "Cuisine d'angle moderne avec bar en pierre, plan noir et éclairage LED",
+        width: 736,
+        height: 920,
+      },
+      {
+        src: "/images/cuisine/cuisine-5.jpg",
+        alt: "Cuisine bois foncé au design épuré avec crédence marbre",
+        width: 736,
+        height: 1104,
+      },
+      {
+        src: "/images/cuisine/cuisine-6.jpg",
+        alt: "Cuisine bicolore blanc laqué et bleu nuit en L avec crédence blanche",
+        width: 736,
+        height: 981,
+      },
+      {
+        src: "/images/cuisine/cuisine-7.jpg",
+        alt: "Cuisine contemporaine beige et grise avec liseré noir et éclairage LED",
+        width: 735,
+        height: 919,
+      },
+    ],
+    faq: [
+      {
+        question: "Réalisez-vous la cuisine sur mesure ?",
+        answer:
+          "Oui, nous concevons l'implantation et fabriquons les meubles aux dimensions de votre pièce, avec les finitions de votre choix.",
+      },
+      {
+        question: "Posez-vous aussi le plan de travail et la crédence ?",
+        answer:
+          "Oui, nous fournissons et posons plans de travail, crédences et revêtements muraux, en coordination avec l'ensemble du chantier.",
+      },
+      {
+        question: "Gérez-vous l'électricité et l'éclairage de la cuisine ?",
+        answer:
+          "Nous intégrons l'éclairage d'ambiance et les bandeaux LED sous-meubles, et coordonnons les points d'eau et d'électricité nécessaires.",
+      },
+    ],
+    relatedSlugs: ["menuiserie", "carrelage", "decoration-interieure"],
   },
 ];
 

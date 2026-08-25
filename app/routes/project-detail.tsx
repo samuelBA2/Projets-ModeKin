@@ -29,7 +29,7 @@ export function meta({ params }: Route.MetaArgs) {
   }
   return [
     ...buildMeta({
-      title: `${project.title} — ${project.location} | Mode Kin`,
+      title: `${project.title}${project.location ? ` — ${project.location}` : ""} | Mode Kin`,
       description: project.description,
       path: `/realisations/${project.slug}`,
       image: project.images[0].src,
@@ -82,11 +82,13 @@ export default function ProjectDetail() {
         <Reveal>
           <h1 className="font-serif text-3xl font-semibold text-navy sm:text-4xl">{project.title}</h1>
           <dl className="mt-4 flex flex-wrap gap-x-8 gap-y-2 text-sm text-ink/70">
-            <div className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
-              <dt className="sr-only">Lieu</dt>
-              <dd>{project.location}</dd>
-            </div>
+            {project.location && (
+              <div className="flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-gold" aria-hidden="true" />
+                <dt className="sr-only">Lieu</dt>
+                <dd>{project.location}</dd>
+              </div>
+            )}
             <div className="flex items-center gap-2">
               <CalendarDays className="h-4 w-4 text-gold" aria-hidden="true" />
               <dt className="sr-only">Date</dt>

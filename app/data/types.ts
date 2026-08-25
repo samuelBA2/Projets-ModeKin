@@ -5,7 +5,8 @@ export type ServiceSlug =
   | "peinture-interieure-exterieure"
   | "carrelage"
   | "habillage-mur-television"
-  | "menuiserie";
+  | "menuiserie"
+  | "decoration-cuisine";
 
 export type Benefit = { iconName: string; title: string; text: string };
 export type FaqItem = { question: string; answer: string };
@@ -29,7 +30,7 @@ export type Project = {
   slug: string;
   title: string;
   category: ServiceSlug;
-  location: string;
+  location?: string;
   date: string; // ISO 8601
   description: string;
   images: ImageAsset[];

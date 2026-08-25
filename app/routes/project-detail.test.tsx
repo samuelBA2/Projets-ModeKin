@@ -17,7 +17,7 @@ const sample = projects[0];
 test("affiche le titre, le lieu et le lien vers le service parent", () => {
   renderAt(sample.slug);
   expect(screen.getByRole("heading", { level: 1, name: new RegExp(sample.title, "i") })).toBeInTheDocument();
-  expect(screen.getByText(sample.location)).toBeInTheDocument();
+  expect(screen.getByText(sample.location!)).toBeInTheDocument();
   expect(screen.getByRole("link", { name: /décoration|peinture|carrelage|plomberie|menuiserie/i })).toHaveAttribute(
     "href",
     `/services/${sample.category}`,

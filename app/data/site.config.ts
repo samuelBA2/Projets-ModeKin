@@ -29,7 +29,7 @@ export const SITE: SiteConfig = {
   mapsUrl: "https://www.google.com/maps", // ⚠️ lien Google Maps de l'établissement
   stats: [
     { value: "+500", label: "projets réalisés" }, // ⚠️
-    { value: "+10 ans", label: "d'expérience" }, // ⚠️
+    { value: "+5 ans", label: "d'expérience" }, // ⚠️
     { value: "98 %", label: "de clients satisfaits" }, // ⚠️
   ],
   forms: { endpoint: "" }, // ⚠️ URL Formspree/EmailJS — vide = mode simulation (voir forms/submit.ts)
